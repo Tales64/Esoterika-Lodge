@@ -1,5 +1,5 @@
 import logo from '../assets/images/EsoterikaLodge.jpg';
-export default function Initiates () {
+export default function Login () {
     return (
         <div className="App">
         <header className="App-header">

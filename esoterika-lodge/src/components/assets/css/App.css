@@ -8,10 +8,16 @@ body{
   text-align: center;
   background-color: #000000;
 }
+.Home {
+  text-align: center;
+  background-color: #000000;
+}
+
 
 .App-logo {
   height: 25vmin;
   pointer-events: none;
+  border-radius: 50%
 }
 
 @media (prefers-reduced-motion: no-preference) {
