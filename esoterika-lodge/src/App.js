@@ -16,7 +16,8 @@ import './components/assets/css/style.css';
 import MainPage from './components/pages/MainPage';
 import InitiatesPage from './components/pages/InitiatesPage';
 import SeekersPage from './components/pages/SeekersPage';
-import Navbar from './components/NavBar';
+import LeadersPage from './components/pages/LeadersPage';
+import NavbarOff from './components/NavBarOff';
 import Footer from './components/Footer';
 
 const router = createBrowserRouter([
@@ -30,13 +31,14 @@ export default function App() {
 function Root() {
   return (
   <div>
-    <Navbar></Navbar>
+    <NavbarOff></NavbarOff>
     <Routes>
       
         {/* Navigation or header can be added here */}
           <Route path="/" element={<MainPage/>} />
           <Route path="/initiates" element={<InitiatesPage/>} />
           <Route path="/seekers" element={<SeekersPage/>} />
+          <Route path="/joyfulLeader" element={<LeadersPage/>} />
           {/* Add more routes for additional pages */}
         
     </Routes>

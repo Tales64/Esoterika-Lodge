@@ -4,7 +4,15 @@
     background-color: black;
 
 } */
-
+.phrase1{
+  
+}
+.phrase2{
+    display: none;
+}
+.calendar{
+    display: inline-block;
+}
 
 .footer{
     /* background-color: black; */
@@ -24,8 +32,8 @@ h1{
 }
 
 .box{
-  max-height: 90%;
-  max-width: 90%;
+  height: 100px;
+  width: 100px;
   border-color: aliceblue;
   border-style: solid;
 }

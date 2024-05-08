@@ -1,26 +1,18 @@
 import React from 'react';
-import './assets/css/style.css'
+import '../css/style.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import background from '../images/White Background.png';
 
 
-export default function CalendarBox ({currentPage, handlePageChange}) {
+
+export default function CalendarBox () {
     
     return (
-        <div>
-               <div className='date'>
-                
-                </div> 
-               <div className=''>
-                
-                </div> 
-               <div className=''>
-                
-                </div> 
-               <div className=''>
-                
-                </div> 
-               <div className=''>
-                
-                </div> 
-        </div>
+      <div className="box">
+          <img src={{background}} className="..." alt="..."></img>
+          <div className="...">
+              <p className="...">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+      </div>
         )
 }

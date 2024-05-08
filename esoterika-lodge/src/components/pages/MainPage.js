@@ -14,8 +14,11 @@ export default function MainPage () {
             ESOTERIKA LODGE
           </h1>
           
-          <h3>
+          <h3 className='phrase1'>
             SEATTLE'S      PREMIER     ESOTERIC    LODGE
+          </h3>
+          <h3 className='phrase2'>
+            AESTIMATIO SIBI HONOSQUE FRATERNITATI
           </h3>
           
         </header>
