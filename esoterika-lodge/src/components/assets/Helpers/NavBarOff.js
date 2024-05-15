@@ -1,9 +1,9 @@
 import React from 'react';
-import './assets/css/style.css'
+import '../css/style.css'
 import {
     Link
   } from "react-router-dom";
-import logo from './assets/images/EsoterikaSeal.svg';
+import logo from '../images/EsoterikaSeal.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,9 +18,9 @@ export default function NavbarOff () {
           <Container fluid>
           <Navbar.Brand href="#home">
             <img
-              src="./assets/images/EsoterikaSeal.svg"
-              width="30"
-              height="30"
+              src={logo}
+              width="50"
+              height="50"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
@@ -38,8 +38,9 @@ export default function NavbarOff () {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Link to="seekers">Seekers</Link>
-                  <Link to="initiates">initiates</Link>
+                  <Link to="/seekers">Seekers</Link>
+                  <Link to="/initiates">Initiates</Link>
+                  <Link to="/joyfulLeader">Leader</Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

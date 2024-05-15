@@ -1,8 +1,18 @@
-import React from 'react';
+
 import '../assets/css/style.css';
 import logo from '../assets/images/EsoterikaSeal.jpg';
+import { useState} from 'react';
+
 
 export default function MainPage () {
+  const [textState, setTextState] = useState("SEATTLE'S      PREMIER     ESOTERIC    LODGE");
+
+  
+    // Use setTimeout to update the message after 2000 milliseconds (2 seconds)
+    const timeoutId = setInterval(() => {
+      setTextState((state) => (state === "AESTIMATIO SIBI HONOSQUE FRATERNITATI" ? "SEATTLE'S      PREMIER     ESOTERIC    LODGE" : "AESTIMATIO SIBI HONOSQUE FRATERNITATI"));;
+    return () => (timeoutId);}, 4000);
+
     return (
         <div className="Home">
           <nav>
@@ -14,12 +24,9 @@ export default function MainPage () {
             ESOTERIKA LODGE
           </h1>
           
-          <h3 className='phrase1'>
-            SEATTLE'S      PREMIER     ESOTERIC    LODGE
-          </h3>
-          <h3 className='phrase2'>
-            AESTIMATIO SIBI HONOSQUE FRATERNITATI
-          </h3>
+          <h2 className='phrase1'>
+            {textState}
+          </h2>
           
         </header>
       </div>

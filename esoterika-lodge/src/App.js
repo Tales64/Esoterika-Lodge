@@ -2,6 +2,7 @@ import React from 'react';
 // import {createRoot} from 'react-dom/client';
 import {
   createBrowserRouter,
+  Link,
   Route,
   RouterProvider,
   Routes,
@@ -17,8 +18,8 @@ import MainPage from './components/pages/MainPage';
 import InitiatesPage from './components/pages/InitiatesPage';
 import SeekersPage from './components/pages/SeekersPage';
 import LeadersPage from './components/pages/LeadersPage';
-import NavbarOff from './components/NavBarOff';
-import Footer from './components/Footer';
+import NavbarOff from './components/assets/Helpers/NavBarOff';
+import Footer from './components/assets/Helpers/Footer';
 
 const router = createBrowserRouter([
   { path: "*", element: <Root /> },

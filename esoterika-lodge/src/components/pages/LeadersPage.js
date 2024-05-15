@@ -1,19 +1,23 @@
 import logo from '../assets/images/EsoterikaLodge.jpg';
-import CalendarBox from '../assets/Helpers/CalenderBox';
+import CalendarRow from '../assets/Helpers/CalendarRow';
 import '../assets/css/style.css'
+import {
+  Route,
+  Routes,
+} from "react-router-dom";
 
 export default function LeadersPage () {
     return (
-        <div className="App calendar">
-        <header className="App-header">
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-          <CalendarBox></CalendarBox>
-        </header>
-      </div>
+        <Routes className="App calendar">
+          <Route path="joyfulLeader" element={<header className="App-header">
+          <div>
+            <CalendarRow></CalendarRow>
+            <CalendarRow></CalendarRow>
+            <CalendarRow></CalendarRow>
+            <CalendarRow></CalendarRow>
+          </div>
+        </header>}/>
+        
+      </Routes>
     )
 }
