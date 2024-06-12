@@ -1,21 +1,22 @@
-import logo from '../assets/images/EsoterikaLodge.jpg';
-export default function Login () {
-    return (
-        <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    )
-}
+// import logo from '../assets/images/EsoterikaLodge.jpg';
+import useAuth from ".../provider/authProvider";
+import { useNavigate } from "react-router-dom";
+// import Routes from "./routes";
+
+const Login = () => {
+  const { setToken } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    setToken("this is a test token");
+    navigate("/", { replace: true });
+  };
+
+  setTimeout(() => {
+    handleLogin();
+  }, 3 * 1000);
+
+  return <>Login Page</>;
+};
+
+export default Login;

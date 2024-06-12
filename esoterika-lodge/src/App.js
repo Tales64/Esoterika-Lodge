@@ -2,7 +2,7 @@ import React from 'react';
 // import {createRoot} from 'react-dom/client';
 import {
   createBrowserRouter,
-  Link,
+  // Link,
   Route,
   RouterProvider,
   Routes,
@@ -18,8 +18,10 @@ import MainPage from './components/pages/MainPage';
 import InitiatesPage from './components/pages/InitiatesPage';
 import SeekersPage from './components/pages/SeekersPage';
 import LeadersPage from './components/pages/LeadersPage';
+import Calendar from './components/assets/Helpers/Calendar';
 import NavbarOff from './components/assets/Helpers/NavBarOff';
 import Footer from './components/assets/Helpers/Footer';
+import SchedulePage from './components/pages/SchedulePage';
 
 const router = createBrowserRouter([
   { path: "*", element: <Root /> },
@@ -40,6 +42,7 @@ function Root() {
           <Route path="/initiates" element={<InitiatesPage/>} />
           <Route path="/seekers" element={<SeekersPage/>} />
           <Route path="/joyfulLeader" element={<LeadersPage/>} />
+          <Route path="/schedule" element={<SchedulePage/>} />
           {/* Add more routes for additional pages */}
         
     </Routes>

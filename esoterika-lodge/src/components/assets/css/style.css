@@ -37,6 +37,12 @@ h4{
  
 }
 
+.cardSize{
+
+  min-height: 10%vh;
+  min-width: 10%vh;
+}
+
 
 
 .navbar1{
@@ -49,6 +55,8 @@ h4{
   border-color: aliceblue;
   border-style: solid;
 }
+
+
 
 
 @media screen and (max-width: 400px) {

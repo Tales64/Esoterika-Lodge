@@ -1,4 +1,4 @@
-import logo from '../assets/images/EsoterikaLodge.jpg';
+// import logo from '../assets/images/EsoterikaLodge.jpg';
 import EventCards from '../assets/Helpers/EventCards';
 import '../assets/css/style.css'
 

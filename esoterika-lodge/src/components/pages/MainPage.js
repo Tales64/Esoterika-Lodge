@@ -1,34 +1,35 @@
-
 import '../assets/css/style.css';
 import logo from '../assets/images/EsoterikaSeal.jpg';
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 
+export default function MainPage() {
+  const [textState, setTextState] = useState("SEATTLE'S PREMIER ESOTERIC LODGE");
 
-export default function MainPage () {
-  const [textState, setTextState] = useState("SEATTLE'S      PREMIER     ESOTERIC    LODGE");
-
-  
-    // Use setTimeout to update the message after 2000 milliseconds (2 seconds)
+  useEffect(() => {
     const timeoutId = setInterval(() => {
-      setTextState((state) => (state === "AESTIMATIO SIBI HONOSQUE FRATERNITATI" ? "SEATTLE'S      PREMIER     ESOTERIC    LODGE" : "AESTIMATIO SIBI HONOSQUE FRATERNITATI"));;
-    return () => (timeoutId);}, 4000);
+      setTextState((state) =>
+        state === "AESTIMATIO SIBI HONOSQUE FRATERNITATI" ? "SEATTLE'S PREMIER ESOTERIC LODGE" : "AESTIMATIO SIBI HONOSQUE FRATERNITATI"
+      );
+    }, 5000);
 
-    return (
-        <div className="Home">
-          <nav>
+    // Cleanup the interval on component unmount
+    return () => clearInterval(timeoutId);
+  }, []);
 
-          </nav>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className='Esoterika'>
-            ESOTERIKA LODGE
-          </h1>
-          
-          <h2 className='phrase1'>
-            {textState}
-          </h2>
-          
-        </header>
-      </div>
-    )
+  return (
+    <div className="Home">
+      <nav>
+        {/* Add navigation content here */}
+      </nav>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="Esoterika">
+          ESOTERIKA LODGE
+        </h1>
+        <h2 className="phrase1">
+          {textState}
+        </h2>
+      </header>
+    </div>
+  );
 }
