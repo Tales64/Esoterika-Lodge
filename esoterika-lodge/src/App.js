@@ -43,6 +43,7 @@ function Root() {
           <Route path="/seekers" element={<SeekersPage/>} />
           <Route path="/joyfulLeader" element={<LeadersPage/>} />
           <Route path="/schedule" element={<SchedulePage/>} />
+          {/* <Route path="/calendar" element={<Calendar/>} /> */}
           {/* Add more routes for additional pages */}
         
     </Routes>

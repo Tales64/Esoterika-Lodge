@@ -4,6 +4,7 @@ import { format, startOfWeek, addDays, subMonths, addMonths, startOfMonth, endOf
 import '../css/Calendar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Offcanvas, Button, Form } from 'react-bootstrap';
+import axios from 'axios';
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -17,10 +18,17 @@ const Calendar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Event created: ${title}, ${description} on ${selectedDate}`);
-    setTitle('');
-    setDescription('');
-    handleClose();
+    const Events = { title, description, date: selectedDate };
+    axios.post('http://localhost:5000/api/events', Events)
+      .then(response => {
+        console.log('Event created:', response.data);
+        setTitle('');
+        setDescription('');
+        handleClose();
+      })
+      .catch(error => {
+        console.error('There was an error creating the event!', error);
+      });
   };
 
   const header = () => {
